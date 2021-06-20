@@ -1,0 +1,22 @@
+[core]
+reloadable = false
+order = -100
+
+[package]
+version = "0.0.1"
+category = "Simulation"
+authors = ["Toni-SM"]
+title = "USD Add-on schema"
+description="USD Add-on schema"
+repository = ""
+keywords = ["add-on", "usd", "schema"]
+changelog = "docs/CHANGELOG.md"
+readme = "docs/README.md"
+preview_image = "data/preview.png"
+icon = "data/icon.png"
+
+[dependencies]
+"omni.usd.schema.isaac" = {}
+
+[[python.module]]
+name = "omni.add_on.RosControlBridgeSchema"
