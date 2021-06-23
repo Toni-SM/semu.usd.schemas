@@ -20,3 +20,6 @@ icon = "data/icon.png"
 
 [[python.module]]
 name = "omni.add_on.RosControlBridgeSchema"
+
+[[python.module]]
+name = "omni.add_on.RosBridgeSchema"
