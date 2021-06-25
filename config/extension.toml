@@ -19,7 +19,7 @@ icon = "data/icon.png"
 "omni.usd.schema.isaac" = {}
 
 [[python.module]]
-name = "omni.add_on.RosControlBridgeSchema"
+name = "omni.add_on.RosBridgeSchema"
 
 [[python.module]]
-name = "omni.add_on.RosBridgeSchema"
+name = "omni.add_on.RosControlBridgeSchema"
