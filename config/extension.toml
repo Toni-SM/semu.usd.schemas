@@ -12,7 +12,6 @@ repository = ""
 keywords = ["add-on", "usd", "schema"]
 changelog = "docs/CHANGELOG.md"
 readme = "docs/README.md"
-preview_image = "data/preview.png"
 icon = "data/icon.png"
 
 [dependencies]
