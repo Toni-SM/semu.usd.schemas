@@ -1,9 +1,9 @@
 [core]
 reloadable = false
-order = -100
+order = -10
 
 [package]
-version = "0.0.1"
+version = "0.0.2"
 category = "Simulation"
 authors = ["Toni-SM"]
 title = "USD Add-on schema"
