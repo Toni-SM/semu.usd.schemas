@@ -6,12 +6,12 @@
 
 ### Table of Contents
 
-- [Add the extension to NVIDIA Omniverse Isaac Sim and enable it](#extension)
+- [Add the extension to an NVIDIA Omniverse app and enable it](#extension)
 - [Supported schemas](#schemas)
-  - [```omni.add_on.RosBridgeSchema```](#RosBridgeSchema)
+  - [omni.add_on.RosBridgeSchema module](#RosBridgeSchema)
     - [```RosCompressedCamera```](#RosCompressedCamera)
     - [```RosAttribute```](#RosAttribute)
-  - [```omni.add_on.RosControlBridgeSchema```](#RosControlBridgeSchema)
+  - [omni.add_on.RosControlBridgeSchema module](#RosControlBridgeSchema)
     - [```RosControlFollowJointTrajectory```](#RosControlFollowJointTrajectory)
     - [```RosControlGripperCommand```](#RosControlGripperCommand)
 
@@ -33,7 +33,7 @@
 The following USD Schemas are supported:
 
 <a name="RosBridgeSchema"></a>
-**omni.add_on.RosBridgeSchema**
+**omni.add_on.RosBridgeSchema module**
 
 <a name="RosCompressedCamera"></a>
 * **RosCompressedCamera:** USD schema to publish ROS compressed images ([CompressedImage](https://docs.ros.org/en/api/sensor_msgs/html/msg/CompressedImage.html))
@@ -86,7 +86,7 @@ The following USD Schemas are supported:
     ```
 
 <a name="RosControlBridgeSchema"></a>
-**omni.add_on.RosControlBridgeSchema**
+**omni.add_on.RosControlBridgeSchema module**
 
 <a name="RosControlFollowJointTrajectory"></a>
 * **RosControlFollowJointTrajectory:** USD schema to support ROS [FollowJointTrajectory](http://docs.ros.org/en/api/control_msgs/html/action/FollowJointTrajectory.html) action services
