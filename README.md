@@ -29,6 +29,7 @@
     ```
 
 2. Enable the extension by following the steps described in [Extension Enabling/Disabling](https://docs.omniverse.nvidia.com/py/kit/docs/guide/extensions.html#extension-enabling-disabling)
+
 <br>
 
 <a name="schemas"></a>
