@@ -68,25 +68,31 @@ The following USD Schemas are supported:
     GetResolutionAttr()
     GetRgbEnabledAttr()
     GetRgbPubTopicAttr()
+
     static GetSchemaAttributeNames()
     ```
 
 <a name="RosAttribute"></a>
-* **RosAttribute:** USD scheme to create a ROS service to get or set a prim attribute
+* **RosAttribute:** USD scheme to create a ROS service to get or set prim attributes
     
     ```python
     class RosAttribute
 
     Bases: omni.isaac.RosBridgeSchema.RosBridgeComponent
 
-    CreateSetterSrvTopicAttr()
-    CreateGetterSrvTopicAttr()
+    CreatePrimsSrvTopicAttr()
+    CreateAttributesSrvTopicAttr()
+    CreateGetAttrSrvTopicAttr()
+    CreateSetAttrSrvTopicAttr()
 
     static Define()
     static Get()
 
-    GetSetterSrvTopicAttr()
-    GetGetterSrvTopicAttr()
+    GetSetAttrSrvTopicAttr()
+    GetGetAttrSrvTopicAttr()
+    GetAttributesSrvTopicAttr()
+    GetPrimsSrvTopicAttr()
+
     static GetSchemaAttributeNames()
     ```
 
@@ -111,6 +117,7 @@ The following USD Schemas are supported:
     GetActionNamespaceAttr()
     GetArticulationPrimRel()
     GetControllerNameAttr()
+
     static GetSchemaAttributeNames()
     ```
 
@@ -132,5 +139,6 @@ The following USD Schemas are supported:
     GetActionNamespaceAttr()
     GetArticulationPrimRel()
     GetControllerNameAttr()
+    
     static GetSchemaAttributeNames()
     ```
