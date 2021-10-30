@@ -88,10 +88,10 @@ The following USD Schemas are supported:
     static Define()
     static Get()
 
-    GetSetAttrSrvTopicAttr()
-    GetGetAttrSrvTopicAttr()
-    GetAttributesSrvTopicAttr()
     GetPrimsSrvTopicAttr()
+    GetAttributesSrvTopicAttr()
+    GetGetAttrSrvTopicAttr()
+    GetSetAttrSrvTopicAttr()
 
     static GetSchemaAttributeNames()
     ```
@@ -139,6 +139,6 @@ The following USD Schemas are supported:
     GetActionNamespaceAttr()
     GetArticulationPrimRel()
     GetControllerNameAttr()
-    
+
     static GetSchemaAttributeNames()
     ```
