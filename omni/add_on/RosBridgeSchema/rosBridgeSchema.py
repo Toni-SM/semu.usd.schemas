@@ -96,11 +96,17 @@ class RosAttribute(ROSSchema.RosBridgeComponent):
         prim = stage.DefinePrim(path, "RosAttribute")
         return RosAttribute(prim)
     
-    def CreateSetterSrvTopicAttr(self, value):
-        self.GetPrim().CreateAttribute("setterSrvTopic", Sdf.ValueTypeNames.String, True).Set(value)
+    def CreateSetAttrSrvTopicAttr(self, value):
+        self.GetPrim().CreateAttribute("setAttrSrvTopic", Sdf.ValueTypeNames.String, True).Set(value)
 
-    def CreateGetterSrvTopicAttr(self, value):
-        self.GetPrim().CreateAttribute("getterSrvTopic", Sdf.ValueTypeNames.String, True).Set(value)
+    def CreateGetAttrSrvTopicAttr(self, value):
+        self.GetPrim().CreateAttribute("getAttrSrvTopic", Sdf.ValueTypeNames.String, True).Set(value)
+
+    def CreateAttributesSrvTopicAttr(self, value):
+        self.GetPrim().CreateAttribute("attributesSrvTopic", Sdf.ValueTypeNames.String, True).Set(value)
+
+    def CreatePrimsSrvTopicAttr(self, value):
+        self.GetPrim().CreateAttribute("primsSrvTopic", Sdf.ValueTypeNames.String, True).Set(value)
 
     @staticmethod
     def Get(stage, path):
@@ -108,15 +114,21 @@ class RosAttribute(ROSSchema.RosBridgeComponent):
         prim = stage.GetPrimAtPath(path)
         return RosAttribute(prim)
 
-    def GetSetterSrvTopicAttr(self):
-        return self.GetPrim().GetAttribute("setterSrvTopic")
+    def GetSetAttrSrvTopicAttr(self):
+        return self.GetPrim().GetAttribute("setAttrSrvTopic")
 
-    def GetGetterSrvTopicAttr(self):
-        return self.GetPrim().GetAttribute("getterSrvTopic")
+    def GetGetAttrSrvTopicAttr(self):
+        return self.GetPrim().GetAttribute("getAttrSrvTopic")
+
+    def GetAttributesSrvTopicAttr(self):
+        return self.GetPrim().GetAttribute("attributesSrvTopic")
+
+    def GetPrimsSrvTopicAttr(self):
+        return self.GetPrim().GetAttribute("primsSrvTopic")
 
     @staticmethod
     def GetSchemaAttributeNames(includeInherited=True):
         names = []
         if includeInherited: 
             names = ROSSchema.RosBridgeComponent.GetSchemaAttributeNames(includeInherited)
-        return names + ["setterSrvTopic", "getterSrvTopic"]
+        return names + ["setAttrSrvTopic", "getAttrSrvTopic" ,"attributesSrvTopic" , "primsSrvTopic"]
