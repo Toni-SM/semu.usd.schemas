@@ -69,6 +69,9 @@ class RosControlGripperCommand(ROSSchema.RosBridgeComponent):
     def CreateArticulationPrimRel(self):
         self.GetPrim().CreateRelationship("articulationPrim")
 
+    def CreateGripperJointsRel(self):
+        self.GetPrim().CreateRelationship("gripperJoints")
+
     def CreateControllerNameAttr(self, value):
         self.GetPrim().CreateAttribute("controllerName", Sdf.ValueTypeNames.String, False).Set(value)
 
@@ -83,6 +86,9 @@ class RosControlGripperCommand(ROSSchema.RosBridgeComponent):
 
     def GetArticulationPrimRel(self):
         return self.GetPrim().GetRelationship("articulationPrim")
+
+    def GetGripperJointsRel(self):
+        return self.GetPrim().GetRelationship("gripperJoints")
 
     def GetControllerNameAttr(self):
         return self.GetPrim().GetAttribute("controllerName")
