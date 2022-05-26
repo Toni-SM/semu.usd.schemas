@@ -1,36 +1,55 @@
-## USD Add-on schemas for NVIDIA Omniverse Isaac Sim
+##  USD schemas for external extensions (under the `semu` namespace, for NVIDIA Omniverse Isaac Sim
 
-> This extension enables the **USD schemas** for the add-ons
+> This extension enables the **USD schemas** for the external extensions under the `semu` namespace
 
 <br>
 
-### Table of Contents
+**Target applications:** NVIDIA Omniverse Isaac Sim
 
-- [Add the extension to an NVIDIA Omniverse app and enable it](#extension)
+**Supported OS:** Linux
+
+**Changelog:** [CHANGELOG.md](src/semu.usd.schemas/docs/CHANGELOG.md)
+
+**Table of Contents:**
+
+- [Extension setup](#setup)
 - [Supported schemas](#schemas)
-  - [omni.add_on.RosBridgeSchema module](#RosBridgeSchema)
-    - [```RosCompressedCamera```](#RosCompressedCamera)
+  - [semu.usd.schemas.RosBridgeSchema module](#RosBridgeSchema)
     - [```RosAttribute```](#RosAttribute)
-  - [omni.add_on.RosControlBridgeSchema module](#RosControlBridgeSchema)
+  - [semu.usd.schemas.RosControlBridgeSchema module](#RosControlBridgeSchema)
     - [```RosControlFollowJointTrajectory```](#RosControlFollowJointTrajectory)
     - [```RosControlGripperCommand```](#RosControlGripperCommand)
 
 <br>
 
-<a name="extension"></a>
-### Add the extension to an NVIDIA Omniverse app and enable it
+![showcase](src/semu.usd.schemas/data/preview.png)
 
-1. Add the the extension by following the steps described in [Extension Search Paths](https://docs.omniverse.nvidia.com/py/kit/docs/guide/extensions.html#extension-search-paths) or simply download and unzip the latest [release](https://github.com/Toni-SM/omni.usd.schema.add_on/releases) in one of the extension folders such as ```PATH_TO_OMNIVERSE_APP/exts```
+<hr>
 
-    Git url (git+https) as extension search path: 
+<a name="setup"></a>
+### Extension setup
+
+1. Add the extension using the [Extension Manager](https://docs.omniverse.nvidia.com/prod_extensions/prod_extensions/ext_extension-manager.html) or by following the steps in [Extension Search Paths](https://docs.omniverse.nvidia.com/py/kit/docs/guide/extensions.html#extension-search-paths)
+
+    * Git url (git+https) as extension search path
     
-    ```
-    git+https://github.com/Toni-SM/omni.usd.schema.add_on.git?branch=main&dir=exts
-    ```
+        ```
+        git+https://github.com/Toni-SM/semu.usd.schemas.git?branch=main&dir=exts
+        ```
 
-2. Enable the extension by following the steps described in [Extension Enabling/Disabling](https://docs.omniverse.nvidia.com/py/kit/docs/guide/extensions.html#extension-enabling-disabling)
+        To install the source code version use the following url
 
-<br>
+        ```
+        git+https://github.com/Toni-SM/semu.usd.schemas.git?branch=main&dir=src
+        ```
+
+    * Compressed (.zip) file for import
+
+        [semu.usd.schemas.zip](https://github.com/Toni-SM/semu.usd.schemas/releases)
+
+2. Enable the extension using the [Extension Manager](https://docs.omniverse.nvidia.com/prod_extensions/prod_extensions/ext_extension-manager.html) or by following the steps in [Extension Enabling/Disabling](https://docs.omniverse.nvidia.com/py/kit/docs/guide/extensions.html#extension-enabling-disabling)
+
+<hr>
 
 <a name="schemas"></a>
 ### Supported schemas
@@ -38,39 +57,7 @@
 The following USD Schemas are supported:
 
 <a name="RosBridgeSchema"></a>
-**omni.add_on.RosBridgeSchema module**
-
-<a name="RosCompressedCamera"></a>
-* **RosCompressedCamera:** USD schema to publish ROS compressed images ([CompressedImage](https://docs.ros.org/en/api/sensor_msgs/html/msg/CompressedImage.html))
-    
-    ```python
-    class RosCompressedCamera
-
-    Bases: omni.isaac.RosBridgeSchema.RosBridgeComponent
-
-    CreateCameraPrimRel()
-    CreateDepthEnabledAttr()
-    CreateDepthPubTopicAttr()
-    CreateFrameIdAttr()
-    CreateQueueSizeAttr()
-    CreateResolutionAttr()
-    CreateRgbEnabledAttr()
-    CreateRgbPubTopicAttr()
-
-    static Define()
-    static Get()
-
-    GetArticulationPrimRel()
-    GetDepthEnabledAttr()
-    GetDepthPubTopicAttr()
-    GetFrameIdAttr()
-    GetQueueSizeAttr()
-    GetResolutionAttr()
-    GetRgbEnabledAttr()
-    GetRgbPubTopicAttr()
-
-    static GetSchemaAttributeNames()
-    ```
+**semu.usd.schemas.RosBridgeSchema module**
 
 <a name="RosAttribute"></a>
 * **RosAttribute:** USD scheme to create a ROS service to get or set prim attributes
@@ -97,7 +84,7 @@ The following USD Schemas are supported:
     ```
 
 <a name="RosControlBridgeSchema"></a>
-**omni.add_on.RosControlBridgeSchema module**
+**semu.usd.schemas.RosControlBridgeSchema module**
 
 <a name="RosControlFollowJointTrajectory"></a>
 * **RosControlFollowJointTrajectory:** USD schema to support ROS [FollowJointTrajectory](http://docs.ros.org/en/api/control_msgs/html/action/FollowJointTrajectory.html) action services
@@ -132,6 +119,7 @@ The following USD Schemas are supported:
     CreateActionNamespaceAttr()
     CreateArticulationPrimRel()
     CreateControllerNameAttr()
+    CreateGripperJointsRel()
     
     static Define()
     static Get()
@@ -139,6 +127,7 @@ The following USD Schemas are supported:
     GetActionNamespaceAttr()
     GetArticulationPrimRel()
     GetControllerNameAttr()
+    GetGripperJointsRel()
 
     static GetSchemaAttributeNames()
     ```
